@@ -2,7 +2,7 @@ var path = require('path');
 
 module.exports = {
 	context: path.resolve('source'),
-	entry: ["./utils.js","./app.js"],
+	entry: ["./main.js"],
 	output: {
 		path: path.resolve('build/'),
 		publicPath: '/public/assets/',
@@ -29,7 +29,7 @@ module.exports = {
 			{
 				test: /\.scss$/,
 				exclude: /node_modules/, 
-				loader: "style-loader!css-loader!autoprefixer-loader!sass-loader?includePaths[]=" + path.resolve(__dirname, "./node_modules/compass-mixins/lib")},
+				loader: "style-loader!css-loader!autoprefixer-loader!sass-loader?includePaths[]=" + path.resolve(__dirname, "./node_modules/compass-mixins/lib")
 			}, 
 			{
 				test: /\.(png|jpg)$/,
